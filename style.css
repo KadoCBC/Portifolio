@@ -1,0 +1,66 @@
+* { margin: 0px; padding: 0px; border: 0px;}
+
+body{
+    height: 100%;
+    display: block;
+    color: black;
+}
+
+.header1{
+    background: whitesmoke;
+
+}
+
+.navegacao{
+    background: hsl(0, 84%, 59%);
+}
+ol {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+ol li{
+    color: beige;
+}
+
+.divflex{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    background-color: antiquewhite;
+
+}
+
+.barralateral{
+    width: 300px;
+    background: #7e7e7e;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sobre{
+    background: rgb(138, 152, 165);
+}
+
+.interesses{
+    background: rgb(138, 152, 165);
+}
+
+.diciplinas{
+    background: rgb(138, 152, 165);
+}
+
+.projetos{
+    background: rgb(138, 152, 165);
+}
+
+.rodape{
+    width: 100%;
+    background: rgb(1, 1, 64);
+}
