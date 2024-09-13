@@ -1,9 +1,13 @@
-* { margin: 0px; padding: 0px; border: 0px;}
+* { margin: 0px; padding: 0px; border: 0px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 
 body{
     height: 100%;
     display: block;
     color: black;
+}
+
+a{
+    color: beige;
 }
 
 .header1{
@@ -12,7 +16,8 @@ body{
 }
 
 .navegacao{
-    background: hsl(0, 84%, 59%);
+    padding: 10px;
+    background: hsl(236, 100%, 30%);
 }
 ol {
     display: flex;
@@ -20,7 +25,7 @@ ol {
     list-style-type: none;
 }
 ol li{
-    color: beige;
+    align-self: center;
 }
 
 .divflex{
@@ -33,8 +38,16 @@ ol li{
 }
 
 .barralateral{
-    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
     background: #7e7e7e;
+    padding: 5px;
+}
+#informações-lateral{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .principal{
@@ -45,22 +58,58 @@ ol li{
 }
 
 .sobre{
+    padding: 20px 0px 0px 0px;
     background: rgb(138, 152, 165);
 }
 
+.elementos{
+    padding: 10px;
+}
+
 .interesses{
+    padding: 10px;
     background: rgb(138, 152, 165);
 }
 
 .diciplinas{
+    padding: 10px;
     background: rgb(138, 152, 165);
 }
 
 .projetos{
+    padding: 10px;
     background: rgb(138, 152, 165);
 }
 
 .rodape{
     width: 100%;
     background: rgb(1, 1, 64);
+    font-size: 11px;
+    text-align: center;
 }
+
+#address{
+    padding: 5px;   
+    color: beige;
+}
+
+.cor-texto1{
+    color: antiquewhite;
+}
+
+.texto-lateral1{
+    align-self: center;
+    text-align: center;
+}
+
+.texto-lateral2{
+    margin-bottom: 10px;
+}
+
+#foto-perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
