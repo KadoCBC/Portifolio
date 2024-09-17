@@ -1,23 +1,19 @@
 * { margin: 0px; padding: 0px; border: 0px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 
+/*Couteudo todo */
 body{
     height: 100%;
     display: block;
-    color: black;
+    background-color: #1F1F1F;
 }
 
-a{
-    color: beige;
-}
-
+/*Barra de navegação */
 .header1{
-    background: whitesmoke;
+    background-color: #1F1F1F;
 
 }
-
 .navegacao{
     padding: 10px;
-    background: hsl(236, 100%, 30%);
 }
 ol {
     display: flex;
@@ -28,82 +24,89 @@ ol li{
     align-self: center;
 }
 
+/*Corpo e barra Lateral da pagina */
 .divflex{
     height: 100vh;
     display: flex;
     flex-direction: row;
     align-content: stretch;
-    background-color: antiquewhite;
-
 }
-
 .barralateral{
     display: flex;
     flex-flow: column wrap;
-    background: #7e7e7e;
     padding: 5px;
+    background-color: #2979FF;
 }
 #informações-lateral{
+    display: flex;
+    height: 300px;
+    background-color: rgba(32, 30, 30, 0.13);
+    border-radius: 8%;
     margin-top: 20px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
 }
-
 .principal{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
-
 .sobre{
     padding: 20px 0px 0px 0px;
-    background: rgb(138, 152, 165);
+    background-color: #3A3A3A;
 }
-
+.interesses{
+    padding: 10px;
+    background-color: #3A3A3A
+}
+.diciplinas{
+    padding: 10px;
+    background-color: #3A3A3A
+}
+.projetos{
+    padding: 10px;
+    background-color: #3A3A3A
+}
 .elementos{
     padding: 10px;
 }
 
-.interesses{
-    padding: 10px;
-    background: rgb(138, 152, 165);
-}
-
-.diciplinas{
-    padding: 10px;
-    background: rgb(138, 152, 165);
-}
-
-.projetos{
-    padding: 10px;
-    background: rgb(138, 152, 165);
-}
-
+/*Rodapé */
 .rodape{
     width: 100%;
-    background: rgb(1, 1, 64);
     font-size: 11px;
     text-align: center;
 }
-
 #address{
     padding: 5px;   
     color: beige;
 }
 
-.cor-texto1{
-    color: antiquewhite;
+
+
+/*Textos e imagens */
+.texto-principal{
+    color: #FFFFFF;
 }
 
-.texto-lateral1{
+#texto-lateral1{
+    color:#FFFFFF;
     align-self: center;
     text-align: center;
 }
 
-.texto-lateral2{
+#texto-lateral2{
+    color: #FFFFFF;
     margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#texto-lateral3{
+    color: #3A3A3A;
+    font-size: 12px;
+    margin-top: auto;
 }
 
 #foto-perfil{
