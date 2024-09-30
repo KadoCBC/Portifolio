@@ -30,6 +30,7 @@ ol li{
     display: flex;
     flex-direction: row;
     align-content: stretch;
+    flex: 1;
 }
 .barralateral{
     display: flex;
@@ -86,16 +87,18 @@ ol li{
 
 /*Rodapé */
 .rodape{
-    width: 100%;
-    font-size: 11px;
     text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+    max-height: 100px;
+    overflow: auto;
 }
 #address{
-    padding: 5px;   
+    padding: 3px;   
     color: beige;
 }
-
-
 
 /*Textos e imagens */
 .texto-principal{
@@ -119,22 +122,44 @@ ol li{
 .texto-lateral2{
     color: #FFFFFF;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 #texto-lateral3{
     color: #939393;
-    font-size: 12px;
+    font-size: 1rem;
     margin-top: auto;
 }
 
 #foto-perfil{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     border-radius: 50%;
     border: 3px solid black;
     align-self: center;
     text-align: center;
 }
 
+
+@media (max-width: 768px) {
+    .divflex {
+        flex-direction: column;
+    }
+    .barralateral {
+        width: 100%;
+    }
+    .principal {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-principal, .elementos, .texto-lateral2 {
+        font-size: 14px;
+    }
+    .listas {
+        margin: 10px;
+    }
+}
 
