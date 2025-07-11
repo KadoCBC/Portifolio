@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -14,10 +18,22 @@ html, body {
 /* ---------------- HEADER ---------------- */
 
 header {
-  height: 44px;
-  display: flex;
-  align-items: center;
-  background-color: #075e3d;
+  position: fixed; /* mantém o header sempre no topo da viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.4s ease; /* animação suave */
+  background-color: #054a31;
+  height: 40px;
+
+  display: flex;               /* ativa flexbox */
+  justify-content: center;     /* centraliza horizontalmente */
+  align-items: center;         /* centraliza verticalmente */
+}
+
+header.oculto {
+  top: -100px; /* esconde o header acima da tela */
 }
 
 .navbar {
@@ -46,7 +62,7 @@ header {
 
 /* ---------------- CONTAINER PRINCIPAL ---------------- */
 
-.container {
+.home {
   display: flex;
   height: calc(100vh - 44px); /* altura total menos o header */
   width: 100%;
@@ -157,6 +173,11 @@ header {
   gap: 20px;
 }
 
+.botoes-sobre a{
+  color: white;
+  text-decoration: none;
+}
+
 .botoes-sobre button {
   background-color: #222;
   color: white;
@@ -168,3 +189,73 @@ header {
 .botoes-sobre button:hover {
   background-color: #444;
 }
+
+/* ---------------- PORTFÓLIO ---------------- */
+
+.portfolio {
+  height: 100vh; /* ocupa toda a altura da tela */
+  background: linear-gradient(to bottom, #ffffff 50%, #c1c1c1 50% );
+  display: flex; /* transforma em container flexível */
+  align-items: center; /* centraliza verticalmente o conteúdo */
+  justify-content: center; /* centraliza horizontalmente o conteúdo */
+  padding: 40px 20px; /* espaçamento interno para respiro */
+}
+
+.portfolio-container {
+  display: flex; /* organiza os cards em linha */
+  justify-content: center; /* centraliza os cards horizontalmente */
+  gap: 40px; /* espaçamento entre os cards */
+  flex-wrap: wrap; /* permite quebra de linha caso a tela seja menor */
+  max-width: 1200px; /* largura máxima do container */
+  margin: 0 auto; /* centraliza o container horizontalmente na tela */
+}
+
+.card {
+  background-color: #f9f9f9;
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: translateY(-10px); /* move o card para cima */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* sombra mais forte para flutuar */
+}
+
+
+.card img {
+  width: 100%; /* faz a imagem ocupar toda a largura do card */
+  height: auto;
+  margin-bottom: 12px; /* espaço abaixo da imagem */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #222;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.btn-projeto {
+  display: inline-block; /* permite aplicar padding e largura no link */
+  background-color: #075e3d;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-projeto:hover {
+  background-color: #054a31;
+}
+

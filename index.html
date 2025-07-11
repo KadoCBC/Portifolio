@@ -13,14 +13,14 @@
     <header>
         <nav aria-label="Barra de navegação" class="navbar"> 
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="home" id="home">
         <section class="perfil">
             <div class="foto-perfil">
                 <img src="./images/foto-perfil.png" alt="Perfil photo">
@@ -45,10 +45,62 @@
             </p>
             <div class="botoes-sobre">
                 <button class="btn-resume">Resume</button>
-                <button class="btn-portfolio">Portfolio</button>
+                <button class="btn-portfolio"><a href="#portfolio">Portfolio</a></button>
             </div>
         </section>
     </main>
+
+    <section class="portfolio" id="portfolio">
+    <div class="portfolio-container">
+        <div class="card">
+        <img src="images/projeto1.jpg" alt="Projeto 1">
+        <h3>Projeto 1</h3>
+        <p>descrição do projeto aqui<br>descrição do projeto aqui<br>descrição do projeto aqui</p>
+        <a href="#" class="btn-projeto">Acessar projeto</a>
+        </div>
+
+        <div class="card">
+        <img src="images/projeto2.jpg" alt="Projeto 2">
+        <h3>Projeto 2</h3>
+        <p>descrição do projeto aqui<br>descrição do projeto aqui<br>descrição do projeto aqui</p>
+        <a href="#" class="btn-projeto">Acessar projeto</a>
+        </div>
+
+        <div class="card">
+        <img src="images/projeto3.jpg" alt="Projeto 3">
+        <h3>Projeto 3</h3>
+        <p>descrição do projeto aqui<br>descrição do projeto aqui<br>descrição do projeto aqui</p>
+        <a href="#" class="btn-projeto">Acessar projeto</a>
+        </div>
+    </div>
+    </section>
+
+    <script>
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+        let headerVisible = true;
+
+        // Oculta o header quando rola para baixo
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            header.classList.add('oculto');
+            headerVisible = false;
+            } else {
+            header.classList.remove('oculto');
+            headerVisible = true;
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Detecta se o mouse está no topo da tela (região de 0 a 50px)
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY < 50 && !headerVisible) {
+            header.classList.remove('oculto');
+            headerVisible = true;
+            }
+        });
+    </script>
+
 
 </body>
 </html>
