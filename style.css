@@ -1,0 +1,170 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  background-color: #075e3d;
+}
+
+.navbar {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- CONTAINER PRINCIPAL ---------------- */
+
+.container {
+  display: flex;
+  height: calc(100vh - 44px); /* altura total menos o header */
+  width: 100%;
+}
+
+/*----------------- Centralização das Sections -------*/
+
+.perfil, .sobre {
+  width: 50%; /*garante metade da tela para cada section*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centraliza os elementos verticalmente*/
+  align-items: center; /*centraliza os elementos horizontalmente*/
+  padding: 40px 20px;
+}
+
+/* ---------------- PERFIL (ESQUERDA) ---------------- */
+
+.perfil {
+    background-color: #fff;
+}
+
+.foto-perfil img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.meu-nome {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cargo {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.instituicao {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.btn-email {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.btn-email:hover {
+  background-color: #555;
+}
+
+/* Ícones sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #ddd;
+}
+
+/* ---------------- SOBRE MIM (DIREITA) ---------------- */
+
+.sobre {
+  background-color: #c1c1c1;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.sobre p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Botões secundários */
+.botoes-sobre {
+  display: flex;
+  gap: 20px;
+}
+
+.botoes-sobre button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.botoes-sobre button:hover {
+  background-color: #444;
+}
